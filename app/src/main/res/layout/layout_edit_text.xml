@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/HintStyle"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorSubHeading"
+            android:visibility="invisible"
+            tools:text="Title"
+            tools:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.stockly.android.widgets.CustomTextInputEditText
+                android:id="@+id/edit_text"
+                style="@style/StyleEditText"
+                android:hint="hello world"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_visibility_off_eye"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/error_message"
+            style="@style/StyleError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorError"
+            android:visibility="invisible"
+            tools:text="Forgot Password"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</layout>

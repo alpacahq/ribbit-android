@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Main">
+        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="PlaidTheme" parent="PlaidThemeBase">
+        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+</resources>

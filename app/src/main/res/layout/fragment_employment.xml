@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        style="@style/TextStyleHeading"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="@string/are_you_employed" />
+
+
+                    <TextView
+                        style="@style/TextStyle.Regular"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="@string/we_are_required_to_collect_this_information_by_law"
+                        android:textAlignment="center" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/employed"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_25sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/employed"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/un_employed"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/unemployed"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/retired"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/retired"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/student"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/student"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+                    </RadioGroup>
+
+                    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                        android:id="@+id/next"
+                        style="@style/AnimatedButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:enabled="false"
+                        android:text="@string/continue_to"
+                        app:finalCornerAngle="50dp"
+                        app:spinning_bar_color="#FFF"
+                        app:spinning_bar_padding="@dimen/_2sdp" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

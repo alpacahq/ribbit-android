@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_35sdp"
+        android:paddingEnd="@dimen/_35sdp">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#452C3A40" />
+    </LinearLayout>
+
+</layout>

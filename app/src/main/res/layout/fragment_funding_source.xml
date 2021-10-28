@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.077">
+
+                <TextView
+                    style="@style/TextStyleHeading"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:text="@string/funding_source"
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/TextStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:text="@string/we_are_required_to_collect_this_information_by_law"
+                    android:textAlignment="center"
+                    android:textColor="#92ACB5" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/income"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_25sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/employment_income"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <CheckBox
+                            android:id="@+id/investment"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/investments"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <CheckBox
+                            android:id="@+id/inheritance"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/inheritance"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <CheckBox
+                            android:id="@+id/business"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/business_income"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <CheckBox
+                            android:id="@+id/savings"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/savings"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+
+                        <CheckBox
+                            android:id="@+id/family"
+                            style="@style/TextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_80sdp"
+                            android:background="@drawable/bg_border_round_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_12sdp"
+                            android:text="@string/family"
+                            android:textColor="#92ACB5"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/next"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:enabled="false"
+                android:text="@string/continue_to"
+                app:finalCornerAngle="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

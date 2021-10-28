@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <ripple android:color="@color/red" android:radius="@dimen/_10sdp">
+            <item android:drawable="@drawable/ic_favorite" />
+        </ripple>
+    </item>
+
+    <item>
+        <ripple android:color="@android:color/transparent" android:radius="0dp">
+            <item android:drawable="@drawable/ic_favorite_border" />
+        </ripple>
+    </item>
+
+
+</selector>

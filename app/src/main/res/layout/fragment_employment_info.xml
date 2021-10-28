@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_28sdp"
+            android:paddingEnd="@dimen/_28sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/TextStyleHeading"
+                    android:layout_gravity="center"
+                    android:text="@string/where_do_you_work"
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/TextStyle.Regular"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/we_are_required_to_collect_this_information_by_law"
+                    android:textAlignment="center" />
+
+                <com.stockly.android.widgets.CustomEditText
+                    android:id="@+id/employer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:hint="@string/employer_name"
+                    android:inputType="textPersonName|textCapSentences"
+                    app:ErrorMessage="@string/error_invalid_name"
+                    app:type="FULL_NAME" />
+
+                <com.stockly.android.widgets.CustomEditText
+                    android:id="@+id/occupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:hint="@string/occupation"
+                    android:inputType="text"
+                    app:ErrorMessage="@string/error_enter_valid_value"
+                    app:type="Text" />
+
+
+            </LinearLayout>
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/next"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_52sdp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/continue_to"
+                app:finalCornerAngle="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

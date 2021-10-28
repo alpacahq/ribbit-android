@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:elevation="0dp"
+            app:navigationIcon="@drawable/ic_back_light_grey">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_centerHorizontal="true"
+                        android:text="$AAPL"
+                        android:textColor="@color/hintColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/title_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:layout_centerHorizontal="true"
+                        android:maxLength="12"
+                        android:text="Apple Inc"
+                        android:textColor="@color/hintColor"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/icon_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".15">
+
+                    <CheckBox
+                        android:id="@+id/favourite"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:background="@drawable/favourite_selector"
+                        android:button="@null" />
+
+                    <TextView
+                        android:id="@+id/add_fund"
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="ADD FUNDS"
+                        android:textColor="#4098FF"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</layout>

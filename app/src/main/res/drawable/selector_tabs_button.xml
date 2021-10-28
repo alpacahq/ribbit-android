@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    android:state_pressed="true"-->
+    <item android:state_selected="true" >
+        <layer-list>
+
+            <item >
+
+                <shape android:shape="rectangle">
+
+                    <solid android:color="@color/colorWhite" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+
+            <item>
+
+                <shape android:shape="rectangle">
+
+                    <solid android:color="#F1F8FB" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

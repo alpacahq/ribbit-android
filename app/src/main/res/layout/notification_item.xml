@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <RelativeLayout
+                style="@style/ShapeAppearanceOverlay.App.ShapeableImageView"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:background="@drawable/bg_round_rec"
+                android:backgroundTint="#ECF4FF"
+                android:scaleType="fitCenter">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/notify_icon"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/gift_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/time"
+                    style="@style/TextStyle.SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:text="@string/_5_50_pm"
+                    android:textColor="#6B161926"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/TextStyle.SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@string/you_won_1000"
+                    android:textColor="@color/textLightBlue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    style="@style/TextStyle.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:text="@string/claim_your_prize_before_2_weeks"
+                    android:textColor="@color/textLightDesc"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

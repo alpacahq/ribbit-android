@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_23sdp">
+
+            <TextView
+                android:id="@+id/number_earned"
+                style="@style/TextStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/strike_textview"
+                android:text="+25"
+                android:textColor="#92ACB5"
+                android:textSize="@dimen/_12sdp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/TextStyle.SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:background="@drawable/strike_textview"
+                    android:text="@string/invite_a_friend"
+                    android:textColor="#92ACB5"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:background="@drawable/strike_textview"
+                    android:text="@string/free_stock"
+                    android:textColor="#92ACB5"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="end"
+                android:src="@drawable/ic_check_circle" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@drawable/ic_line" />
+
+    </LinearLayout>
+
+
+</layout>

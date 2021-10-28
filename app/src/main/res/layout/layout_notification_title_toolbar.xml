@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:elevation="0dp"
+            app:navigationIcon="@drawable/ic_back_dark">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_title"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_34sdp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/app_logo_title" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/bg_round_rec"
+                    android:backgroundTint="#FFE68B"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_ticket" />
+
+                    <TextView
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:text="45"
+                        android:textColor="#7A5F4B"
+                        android:textSize="@dimen/_11sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</layout>

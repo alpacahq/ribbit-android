@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/verified_frame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:animateLayoutChanges="true"
+                android:background="#69EFB7"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_check_circle_dark" />
+
+                <TextView
+                    style="@style/TextStyle.SemiBold"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/email_verified"
+                    android:textColor="#99000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.247">
+
+                <TextView
+                    style="@style/TextStyleHeading"
+                    android:text="@string/referral_code" />
+
+                <com.stockly.android.widgets.CustomEditText
+                    android:id="@+id/referral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:hint="@string/enter_code"
+                    android:inputType="text"
+                    app:ErrorMessage="@string/error_enter_valid_value"
+                    app:type="Text" />
+                <!--                android:drawableEnd="@drawable/ic_check_circle_outline"-->
+
+            </LinearLayout>
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/next"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/continue_to"
+                app:layout_constraintBottom_toTopOf="@id/skip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/skip"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="@string/skip"
+                android:textColor="@color/transparentButtonTextColor"
+                app:finalCornerAngle="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="@color/colorPrimary"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

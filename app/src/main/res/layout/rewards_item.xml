@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_6sdp">
+
+        <LinearLayout
+            android:id="@+id/won_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_no_color_round_rec"
+            android:backgroundTint="@color/colorWhite"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/you_win"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="You won"
+                android:textColor="#92ACB5"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <TextView
+                android:id="@+id/win_price"
+                style="@style/TextStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="$89"
+                android:textColor="#161926"
+                android:textSize="@dimen/_28sdp" />
+
+
+            <ImageView
+                android:id="@+id/win_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="end"
+                android:src="@drawable/apple" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scratch_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_no_color_round_rec"
+            android:backgroundTint="#3A3752"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/scratch_icon"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/title"
+                    style="@style/TextStyleHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_confirmation_number"
+                    android:text="$89"
+                    android:textColor="#161926"
+                    android:textSize="@dimen/_28sdp" />
+
+
+                <TextView
+                    android:id="@+id/icon"
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Scratch to win"
+                    android:textSize="@dimen/_9sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

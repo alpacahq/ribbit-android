@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="watchList"
+            type="com.stockly.android.models.Positions" />
+    </data>
+    <LinearLayout
+        android:id="@+id/won_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:padding="@dimen/_15sdp">
+
+        <com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+            android:id="@+id/win_icon"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/apple"
+            app:circleBackgroundColor="@color/textColor"
+            app:text="RR"
+            app:textFont="@font/inter_semibold"
+            app:textSize="12sp" />
+<!--        <ImageView-->
+<!--            android:id="@+id/win_icon"-->
+<!--            android:layout_width="@dimen/_25sdp"-->
+<!--            android:layout_height="@dimen/_20sdp"-->
+<!--            android:layout_marginTop="@dimen/_3sdp"-->
+<!--            android:src="@drawable/apple" />-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{watchList.symbol}"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/desc"
+                style="@style/TextStyle"
+                android:layout_width="@dimen/_60sdp"
+                android:singleLine="true"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:text="@{watchList.getTitleDescription()}"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/graph_icon"
+            android:layout_weight="1"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_graph_icon_defualt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_minus5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/win_price"
+                style="@style/TextStyle.SemiBold"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@{watchList.getStockPrice()}"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/hintColor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/win_percentage"
+                style="@style/TextStyleHeading"
+                android:layout_marginTop="@dimen/_minus4sdp"
+                android:drawablePadding="@dimen/_minus5sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/percent_124"
+                android:textAlignment="center"
+                android:textColor="#3CC182"
+                android:textSize="11sp"
+                app:drawableStartCompat="@drawable/ic_arrow_drop_up_custom" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="asset"
+            type="com.stockly.android.models.Positions" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/search_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_13sdp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/symbol"
+                    style="@style/TextStyle.SemiBold"
+                    android:layout_width="@dimen/_64sdp"
+                    android:singleLine="true"
+                    android:text="@{asset.symbol}"
+                    android:textColor="#161926"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/title_desc"
+                    style="@style/TextStyle.Medium"
+                    android:layout_below="@id/symbol"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:singleLine="true"
+                    android:text="@{asset.getTitleDescription()}"
+                    android:textAlignment="center"
+                    android:textColor="#B1B1B1"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/favourite"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/favourite_selector"
+                android:button="@null"
+                android:checked="@{asset.isFavourite}" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

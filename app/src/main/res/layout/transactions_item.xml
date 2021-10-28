@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="payment"
+            type="com.stockly.android.models.Payment" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@drawable/bg_selector_ripple"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/transfer_sign"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_vertical"
+            android:src="@{context.getDrawable(payment.getTransferDirectionDrawable())}" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_16sdp">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextStyle.SemiBold"
+                android:layout_width="match_parent"
+                android:text="@{payment.getTitle()}"
+                android:textColor="#161926"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/TextStyle.Medium"
+                android:layout_width="match_parent"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@{payment.getStatus()}"
+                android:textColor="@{context.getColor(payment.getStatusColor())}"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/amount"
+            style="@style/TextStyle.SemiBold"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="@{payment.getAmount()}"
+            android:textColor="#6B161926"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>

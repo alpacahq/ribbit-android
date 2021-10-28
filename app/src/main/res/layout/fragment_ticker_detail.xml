@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ticker"
+            type="com.stockly.android.models.Positions" />
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWindowBackground"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_option_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/won_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_18sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+                            android:id="@+id/win_icon"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/apple"
+                            app:circleBackgroundColor="@color/textColor"
+                            app:text="RR"
+                            app:textFont="@font/inter_semibold"
+                            app:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/win_percentage"
+                            style="@style/TextStyleHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/win_price"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_minus5sdp"
+                            android:drawablePadding="@dimen/_minus5sdp"
+                            android:gravity="center"
+                            android:text="@string/percent_124"
+                            android:textAlignment="center"
+                            android:textColor="#3CC182"
+                            android:textSize="11sp"
+                            app:drawableStartCompat="@drawable/ic_arrow_drop_up" />
+
+                        <TextView
+                            android:id="@+id/win_price"
+                            style="@style/TextStyleHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/dollar_0"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnr_legends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/day1"
+                            style="@style/TextStyle"
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/text_bg_round_selector"
+                            android:button="@null"
+                            android:checked="true"
+                            android:text="@string/_1d"
+                            android:textAlignment="center"
+                            android:textColor="@color/hintColor"
+                            android:textSize="13sp" />
+
+                        <RadioButton
+                            android:id="@+id/week1"
+                            style="@style/TextStyle"
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/text_bg_round_selector"
+                            android:button="@null"
+                            android:text="@string/_1w"
+                            android:textAlignment="center"
+                            android:textColor="@color/hintColor"
+                            android:textSize="13sp" />
+
+                        <RadioButton
+                            android:id="@+id/month3"
+                            style="@style/TextStyle"
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/text_bg_round_selector"
+                            android:button="@null"
+                            android:text="@string/_3m"
+                            android:textAlignment="center"
+                            android:textColor="@color/hintColor"
+                            android:textSize="13sp" />
+
+                        <RadioButton
+                            android:id="@+id/month6"
+                            style="@style/TextStyle"
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/text_bg_round_selector"
+                            android:button="@null"
+                            android:text="@string/_6m"
+                            android:textAlignment="center"
+                            android:textColor="@color/hintColor"
+                            android:textSize="13sp" />
+
+                        <RadioButton
+                            android:id="@+id/year1"
+                            style="@style/TextStyle"
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/text_bg_round_selector"
+                            android:button="@null"
+                            android:text="@string/_1y"
+                            android:textAlignment="center"
+                            android:textColor="@color/hintColor"
+                            android:textSize="13sp" />
+
+                        <RadioButton
+                            android:id="@+id/year5"
+                            style="@style/TextStyle"
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/text_bg_round_selector"
+                            android:button="@null"
+                            android:text="@string/_5y"
+                            android:textAlignment="center"
+                            android:textColor="@color/hintColor"
+                            android:textSize="13sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextStyle.Medium"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/statistics"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:baselineAligned="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_8sdp">
+
+                            <TextView
+                                android:id="@+id/text_open"
+                                style="@style/TextStyle.Medium"
+                                android:text="@string/open"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/open"
+                                style="@style/TextStyleHeading"
+                                android:layout_marginStart="@dimen/_24sdp"
+                                android:layout_toEndOf="@id/text_open"
+                                android:text="@{ticker.getTickerOpenPrice()}"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/text_high"
+                                style="@style/TextStyle.Medium"
+                                android:layout_below="@id/text_open"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:text="@string/day_high"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/high"
+                                style="@style/TextStyleHeading"
+                                android:layout_alignTop="@id/text_high"
+                                android:layout_marginStart="@dimen/_4sdp"
+                                android:layout_toEndOf="@id/text_high"
+                                android:text="@{ticker.getTickerHighPrice()}"
+                                android:textSize="14sp" />
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/text_low"-->
+                            <!--                                style="@style/TextStyle.Medium"-->
+                            <!--                                android:layout_below="@id/text_high"-->
+                            <!--                                android:layout_marginTop="@dimen/_15sdp"-->
+                            <!--                                android:text="Low "-->
+                            <!--                                android:textSize="14sp" />-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/low"-->
+                            <!--                                style="@style/TextStyleHeading"-->
+                            <!--                                android:layout_alignTop="@id/text_low"-->
+                            <!--                                android:layout_marginStart="@dimen/_16sdp"-->
+                            <!--                                android:layout_toEndOf="@id/text_high"-->
+                            <!--                                android:text="12.20"-->
+                            <!--                                android:textSize="14sp" />-->
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_8sdp">
+
+                            <TextView
+                                android:id="@+id/low"
+                                style="@style/TextStyleHeading"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="@{ticker.getTickerLowPrice()}"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/text_low"
+                                style="@style/TextStyle.Medium"
+                                android:layout_toStartOf="@id/low"
+                                android:text="@string/day_low"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/text_volume"
+                                style="@style/TextStyle.Medium"
+                                android:layout_below="@id/low"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_toStartOf="@id/volume"
+                                android:text="@string/volume"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/volume"
+                                style="@style/TextStyleHeading"
+                                android:layout_below="@id/low"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:text="@{ticker.getTickerVolume()}"
+                                android:textSize="14sp" />
+
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/avg_volume"-->
+                            <!--                                style="@style/TextStyleHeading"-->
+                            <!--                                android:layout_below="@id/volume"-->
+                            <!--                                android:layout_alignParentEnd="true"-->
+                            <!--                                android:layout_marginStart="@dimen/_16sdp"-->
+                            <!--                                android:layout_marginTop="@dimen/_15sdp"-->
+                            <!--                                android:text="12.20"-->
+                            <!--                                android:textSize="14sp" />-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/text_avg_volume"-->
+                            <!--                                style="@style/TextStyle.Medium"-->
+                            <!--                                android:layout_below="@id/volume"-->
+                            <!--                                android:layout_marginTop="@dimen/_15sdp"-->
+                            <!--                                android:layout_toStartOf="@id/avg_volume"-->
+                            <!--                                android:text="Avg Vol "-->
+                            <!--                                android:textSize="14sp" />-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/market"-->
+                            <!--                                style="@style/TextStyleHeading"-->
+                            <!--                                android:layout_below="@id/avg_volume"-->
+                            <!--                                android:layout_alignParentEnd="true"-->
+                            <!--                                android:layout_marginStart="@dimen/_16sdp"-->
+                            <!--                                android:layout_marginTop="@dimen/_15sdp"-->
+                            <!--                                android:text="12.20"-->
+                            <!--                                android:textSize="14sp" />-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/text_market"-->
+                            <!--                                style="@style/TextStyle.Medium"-->
+                            <!--                                android:layout_below="@id/avg_volume"-->
+                            <!--                                android:layout_marginTop="@dimen/_15sdp"-->
+                            <!--                                android:layout_toStartOf="@id/market"-->
+                            <!--                                android:text="Market  "-->
+                            <!--                                android:textSize="14sp" />-->
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/portfolio_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_42sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:padding="@dimen/_12sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/icon_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_donut">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/ic_donut_large_24px"
+                            android:backgroundTint="@color/colorPrimary" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toEndOf="@id/icon_bank"
+                        android:text="@string/your_portfolio"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        style="@style/TextStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toEndOf="@id/icon_bank"
+                        android:text="@string/dollar_0"
+                        android:textSize="20sp" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/add_fund"-->
+                    <!--                    style="@style/TextStyleHeading"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:layout_centerVertical="true"-->
+                    <!--                    android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                    android:layout_marginEnd="@dimen/_3sdp"-->
+                    <!--                    android:text="+ ADD FUNDS"-->
+                    <!--                    android:textColor="@color/color_text_theme"-->
+                    <!--                    android:textSize="13sp" />-->
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/_6sdp"
+            android:paddingStart="@dimen/_30sdp"
+            android:paddingEnd="@dimen/_30sdp">
+
+            <TextView
+                android:id="@+id/sell"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_custom_color_round_rec"
+                android:text="@string/sell"
+                android:textColor="@color/color_text_theme"
+                android:textSize="13sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buy"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:text="@string/buy"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

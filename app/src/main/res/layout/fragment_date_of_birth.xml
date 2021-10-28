@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.260">
+
+                <TextView
+                    android:id="@+id/text_dob"
+                    style="@style/TextStyleHeading"
+                    android:text="Enter your date \nof birth" />
+
+                <LinearLayout
+                    android:id="@+id/dob_lay"
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_dob"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp">
+
+                    <EditText
+                        android:id="@+id/dob"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@android:color/transparent"
+                        android:hint="MM/DD/YYYY"
+                        android:imeActionLabel="actionDone"
+                        android:imeOptions="actionDone"
+                        android:inputType="date"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:paddingStart="@dimen/_30sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/dob_lay"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_line" />
+
+                <TextView
+                    android:id="@+id/error"
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_marginStart="@dimen/_48sdp"
+                    android:layout_marginEnd="4dp"
+                    android:text="Invalid Date"
+                    android:textColor="@color/colorError"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/next"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_52sdp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="Continue"
+                app:finalCornerAngle="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

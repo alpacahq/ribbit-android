@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/won_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextStyle.SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$AAPL"
+                android:textColor="#161926"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/desc"
+                style="@style/TextStyle"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:singleLine="true"
+                android:text="Apple Inc."
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/graph_icon"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_graph_icon_defualt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_minus5sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/win_price"
+                style="@style/TextStyle.SemiBold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="center_horizontal"
+                android:text="$189"
+                android:textColor="@color/hintColor"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/drop_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_minus8sdp"
+                    android:paddingStart="@dimen/_minus6sdp"
+                    android:paddingEnd="@dimen/_minus6sdp"
+                    android:src="@drawable/ic_arrow_drop_up" />
+
+                <TextView
+                    android:id="@+id/win_percentage"
+                    style="@style/TextStyleHeading"
+                    android:layout_marginTop="@dimen/_minus2sdp"
+                    android:layout_toEndOf="@id/drop_up"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:text="24%"
+                    android:textAlignment="center"
+                    android:textColor="#3CC182"
+                    android:textSize="11sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

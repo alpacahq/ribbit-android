@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF74c947</color>
+    <color name="colorPrimaryDark">#4D8C2C</color>
+
+<!--    <color name="colorPrimary">#FF715AFF</color>-->
+<!--    <color name="colorPrimaryDark">#4D36D6</color>-->
+
+    <color name="primary_light">#0074c947</color>
+    <color name="purple_200">#FF715AFF</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <color name="colorBlack">#FF000000</color>
+    <color name="textLightBlue">#161926</color>
+    <color name="textLightDesc">#872C3A40</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorOffWhite">#FFE5E5E5</color>
+    <color name="colorWindowBackground">#F9F9F9</color>
+    <color name="textColorNormal">#ACACAC</color>
+    <color name="editTextBgColor">#1492ACB5</color>
+    <color name="transparentButtonTextColor">#4F4D5E</color>
+    <color name="textColor">#452C3A40</color>
+    <color name="textLineColor">#DFDFDF</color>
+
+
+    <color name="textColorSubHeading">#161926</color>
+    <color name="hintColor">#92ACB5</color>
+    <color name="hintDarkColor">#6D7F86</color>
+    <color name="colorDots">#717171</color>
+    <color name="darkGrey">#6A6868</color>
+    <color name="colorGrey">#a9a9a9</color>
+    <color name="lightGrey">#E9E9E9</color>
+    <color name="colorInActiveDots">#17717171</color>
+    <color name="titleColor">#000000</color>
+    <color name="colorError">#F44336</color>
+    <color name="greenColor">#22C18E</color>
+    <color name="colorPurple">#7270FF</color>
+    <color name="colorPurpleLight">#7674FF</color>
+    <color name="colorLightRed">#FF927A</color>
+    <color name="colorLightRed_1">#FF9780</color>
+
+    <color name="colorBlue">#4098FF</color>
+    <color name="colorBlueLight">#4D9EFA</color>
+    <color name="holo_light_red">#FFEDFC</color>
+    <color name="light_red">#FF56E4</color>
+
+    <color name="colorPrimaryPix">#075e54</color>
+    <color name="colorPrimaryLightPix">#80075e54</color>
+
+    <integer-array name="androidcolors">
+        <item>@color/colorPrimaryPix</item>
+        <item>@color/colorBlue</item>
+        <item>@color/greenColor</item>
+        <item>@color/colorLightRed</item>
+        <item>@color/red</item>
+        <item>@color/colorPurple</item>
+        <item>@color/colorInActiveDots</item>
+        <item>@color/hintColor</item>
+        <item>@color/textColorSubHeading</item>
+        <item>@color/purple_200</item>
+    </integer-array>
+
+    <color name="normal_status_color">#872C3A40</color>
+</resources>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    android:background="#D170FF"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_bank" />
+
+                    <TextView
+                        android:id="@+id/skip"
+                        style="@style/TextStyleHeading.Sub"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:text="@string/skip"
+                        android:textColor="@color/colorWhite" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_24sdp"
+                    android:paddingEnd="@dimen/_24sdp"
+                    app:layout_constraintTop_toBottomOf="@id/top">
+
+                    <TextView
+                        style="@style/TextStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/let_s_connect_your_bank_account"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_24sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/plaid_text"
+                        style="@style/TextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="@string/plaid_text"
+                        android:textAlignment="center"
+                        android:textColor="#2C3A40"
+                        android:textSize="15sp" />
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:id="@+id/disclaimer"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="@dimen/_20sdp"-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:padding="@dimen/_2sdp"-->
+                    <!--                        android:paddingStart="@dimen/_12sdp"-->
+                    <!--                        android:paddingEnd="@dimen/_12sdp">-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:id="@+id/lock_icon"-->
+                    <!--                            android:layout_width="@dimen/_16sdp"-->
+                    <!--                            android:layout_height="@dimen/_20sdp"-->
+                    <!--                            android:layout_marginTop="@dimen/_4sdp"-->
+                    <!--                            android:src="@drawable/ic_lock"-->
+                    <!--                            app:tint="@color/colorPrimaryDark" />-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:orientation="vertical"-->
+                    <!--                            android:paddingStart="@dimen/_16sdp">-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/title_text"-->
+                    <!--                                style="@style/TextStyle"-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:text="We protect your SSN"-->
+                    <!--                                android:textColor="#000000"-->
+                    <!--                                android:textSize="15sp" />-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/description_text"-->
+                    <!--                                style="@style/TextStyle"-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:layout_marginTop="@dimen/_2sdp"-->
+                    <!--                                android:paddingEnd="@dimen/_10sdp"-->
+                    <!--                                android:text="As a registered broker, We are required to report your income to to the US Patriot Act"-->
+                    <!--                                android:textColor="#92ACB5"-->
+                    <!--                                android:textSize="13sp" />-->
+                    <!--                        </LinearLayout>-->
+
+                    <!--                    </LinearLayout>-->
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:id="@+id/disclaimer1"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="@dimen/_12sdp"-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:padding="@dimen/_2sdp"-->
+                    <!--                        android:paddingStart="@dimen/_12sdp"-->
+                    <!--                        android:paddingEnd="@dimen/_12sdp">-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:id="@+id/lock_icon1"-->
+                    <!--                            android:layout_width="@dimen/_16sdp"-->
+                    <!--                            android:layout_height="@dimen/_20sdp"-->
+                    <!--                            android:layout_marginTop="@dimen/_4sdp"-->
+                    <!--                            android:src="@drawable/ic_lock"-->
+                    <!--                            app:tint="@color/colorPrimaryDark" />-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:orientation="vertical"-->
+                    <!--                            android:paddingStart="@dimen/_16sdp">-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/title_text1"-->
+                    <!--                                style="@style/TextStyle"-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:text="No impact on credit score"-->
+                    <!--                                android:textColor="@color/colorBlack"-->
+                    <!--                                android:textSize="15sp" />-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/description_text1"-->
+                    <!--                                style="@style/TextStyle"-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:layout_marginTop="@dimen/_2sdp"-->
+                    <!--                                android:paddingEnd="@dimen/_10sdp"-->
+                    <!--                                android:text="As a registered broker, We are required to report your income to to the US Patriot Act"-->
+                    <!--                                android:textColor="#92ACB5"-->
+                    <!--                                android:textSize="13sp" />-->
+                    <!--                        </LinearLayout>-->
+                    <!--                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_90sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/next">
+
+                        <TextView
+                            style="@style/TextStyle"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:text="@string/powered_by"
+                            android:textColor="#D8D8D8" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_frame_plaid" />
+                    </LinearLayout>
+
+                    <!--                    <com.google.android.material.button.MaterialButton-->
+                    <!--                        android:id="@+id/next"-->
+                    <!--                        style="@style/ButtonStyle"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_marginBottom="@dimen/_10sdp"-->
+                    <!--                        android:text="Continue"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="parent" />-->
+                    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                        android:id="@+id/next"
+                        style="@style/AnimatedButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:text="@string/continue_to"
+                        app:spinning_bar_color="#FFF"
+                        app:spinning_bar_padding="@dimen/_2sdp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_28sdp"
+                android:paddingEnd="@dimen/_28sdp">
+
+                <TextView
+                    style="@style/TextStyleHeading"
+                    android:layout_width="match_parent"
+                    android:text="@string/do_you_or_a_family_member_work_for_another_brokerage"
+                    android:textAlignment="center" />
+
+
+                <com.stockly.android.widgets.CustomEditText
+                    android:id="@+id/company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/company_name"
+                    android:inputType="text"
+                    app:ErrorMessage="@string/error_enter_valid_value"
+                    app:type="Text" />
+
+                <com.stockly.android.widgets.CustomEditText
+                    android:id="@+id/person_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:hint="@string/name_of_person"
+                    android:inputType="textPersonName|textCapSentences"
+                    app:ErrorMessage="@string/error_invalid_name"
+                    app:type="FULL_NAME" />
+
+                <com.stockly.android.widgets.CustomEditText
+                    android:id="@+id/relation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:hint="@string/relationship_to_person"
+                    android:inputType="text"
+                    app:ErrorMessage="@string/error_enter_valid_value"
+                    app:type="Text" />
+
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/next"
+                    style="@style/AnimatedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_82sdp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/continue_to"
+                    app:finalCornerAngle="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:spinning_bar_color="#FFF"
+                    app:spinning_bar_padding="@dimen/_2sdp" />
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

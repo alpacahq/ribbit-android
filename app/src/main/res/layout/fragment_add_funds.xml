@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_24sdp"
+                android:paddingEnd="@dimen/_24sdp"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp">
+
+                    <TextView
+                        style="@style/TextStyleHeading.Sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/add_funds"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+
+                    <com.stockly.android.widgets.CustomEditText
+                        android:id="@+id/edt_funds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:drawableStart="@drawable/ic_dollar"
+                        android:drawableEnd="@drawable/ic_unfold"
+                        android:hint="@string/enter_amount"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/_6sdp"
+                        app:ErrorMessage="@string/error_enter_valid_value"
+                        app:type="Number" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/twenty_five"
+                            style="@style/TextStyle.Medium"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_border_round_rec_dark"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/_25"
+                            android:textColor="#9B9DAA"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/fifty"
+                            style="@style/TextStyle.Medium"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_rec_dark"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/_50"
+                            android:textColor="#9B9DAA"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/hundred"
+                            style="@style/TextStyle.Medium"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_rec_dark"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/_100"
+                            android:textColor="#9B9DAA"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/five_hundred"
+                            style="@style/TextStyle.Medium"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@drawable/bg_border_round_rec_dark"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/_500"
+                            android:textColor="#9B9DAA"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_40sdp">
+
+                        <TextView
+                            android:id="@+id/bank_name"
+                            style="@style/TextStyle.Medium"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="@string/bank_name"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/available_amount"
+                            style="@style/TextStyle.Medium"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:text="@string/available_0_00"
+                            android:textColor="#872C3A40"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/change"
+                            style="@style/TextStyle.Medium"
+                            android:layout_below="@id/bank_name"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:text="@string/change"
+                            android:textColor="#5240C0"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/account_no"
+                            style="@style/TextStyle.Medium"
+                            android:layout_below="@id/available_amount"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:text="@string/account_xxxx"
+                            android:textColor="#872C3A40"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/disclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp"
+                    app:layout_constraintBottom_toTopOf="@id/add_funds"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/lock_icon"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_lock" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        style="@style/TextStyle"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:text="@string/your_information_is_safe_with_us_the_funds_will_be_deducted_within_a_few_days_from_now"
+                        android:textColor="#962C3A40"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add_funds"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/add_funds"
+                    app:finalCornerAngle="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:spinning_bar_color="#FFF"
+                    app:spinning_bar_padding="@dimen/_5sdp" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:elevation="1dp"
+        android:background="@color/colorPurpleLight"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/ic_back_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_title"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:src="@drawable/app_logo_title" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_round_rec"
+                android:backgroundTint="#B8B7FF"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ticket"
+                    app:tint="#313049" />
+
+                <TextView
+                    style="@style/TextStyle.SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:text="45"
+                    android:textColor="#313049"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+</layout>

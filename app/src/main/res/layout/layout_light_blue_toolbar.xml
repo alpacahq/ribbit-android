@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorBlueLight"
+        android:elevation="1dp"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/ic_back_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/icon_title"
+                style="@style/TextStyleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_65sdp"
+                android:text="Profile"
+                android:textColor="@color/colorWhite"
+                android:textSize="21sp" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/setting"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginEnd="@dimen/_15sdp"-->
+<!--                android:src="@drawable/ic_edit" />-->
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</layout>

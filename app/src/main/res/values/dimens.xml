@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius">5dp</dimen>
+    <dimen name="dots_height">7dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="ic_line_width">285dp</dimen>
+</resources>

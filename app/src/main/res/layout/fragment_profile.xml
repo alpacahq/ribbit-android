@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_profile_toolbar" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_13sdp"
+                android:paddingEnd="@dimen/_13sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="@dimen/_12sdp">
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/profile_img"-->
+                    <!--                        android:layout_width="@dimen/_58sdp"-->
+                    <!--                        android:layout_height="@dimen/_58sdp"-->
+                    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                    <!--                        android:src="@drawable/profile_img" />-->
+                    <com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+                        android:id="@+id/profile_img"
+                        android:layout_width="@dimen/_58sdp"
+                        android:layout_height="@dimen/_58sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/profile_img"
+                        app:circleBackgroundColor="@color/textColor"
+                        app:text="RR"
+                        app:textFont="@font/inter_semibold"
+                        app:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        style="@style/TextStyleHeading"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/profile_img"
+                        android:ellipsize="end"
+                        android:letterSpacing="-0.01"
+                        android:singleLine="true"
+                        android:text="@string/hello_jonathen"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/bio"
+                        style="@style/TextStyle.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/user_name"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@id/profile_img"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:minLines="3"
+                        android:textColor="#75FFFFFF"
+                        android:textSize="14sp" />
+
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_below="@+id/bio"-->
+                    <!--                        android:layout_marginStart="@dimen/_30sdp"-->
+                    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                    <!--                        android:layout_marginBottom="@dimen/_4sdp"-->
+                    <!--                        android:layout_toEndOf="@id/profile_img"-->
+                    <!--                        android:gravity="center_vertical"-->
+                    <!--                        android:orientation="horizontal">-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:id="@+id/fb_icon"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_gravity="center_vertical"-->
+                    <!--                            android:layout_marginStart="@dimen/_5sdp"-->
+                    <!--                            android:src="@drawable/ic_fb"-->
+                    <!--                            android:textColor="@color/colorWhite" />-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:id="@+id/twitter_icon"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginStart="@dimen/_20sdp"-->
+                    <!--                            android:src="@drawable/ic_twitter" />-->
+
+
+                    <!--                        <ImageView-->
+                    <!--                            android:id="@+id/insta_icon"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginStart="@dimen/_20sdp"-->
+                    <!--                            android:src="@drawable/ic_insta" />-->
+
+
+                    <!--                    </LinearLayout>-->
+
+                </RelativeLayout>
+
+
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_15sdp"-->
+                <!--                    android:background="@drawable/bg_no_color_round_rec"-->
+                <!--                    android:backgroundTint="@color/colorWhite"-->
+                <!--                    android:padding="@dimen/_12sdp">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/icon_bank"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginStart="@dimen/_8sdp"-->
+                <!--                        android:src="@drawable/ic_link" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/shareable_link"-->
+                <!--                        style="@style/TextStyle"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginStart="@dimen/_15sdp"-->
+                <!--                        android:layout_marginEnd="@dimen/_55sdp"-->
+                <!--                        android:layout_toEndOf="@id/icon_bank"-->
+                <!--                        android:hint="stockly.io/jamessmith"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:textColor="#92ACB5"-->
+                <!--                        android:textSize="@dimen/_13sdp" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/share"-->
+                <!--                        style="@style/TextStyleHeading"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentEnd="true"-->
+                <!--                        android:layout_marginStart="@dimen/_2sdp"-->
+                <!--                        android:layout_marginEnd="@dimen/_5sdp"-->
+                <!--                        android:text="SHARE"-->
+                <!--                        android:textColor="#4098FF"-->
+                <!--                        android:textSize="@dimen/_11sdp" />-->
+
+                <!--                </RelativeLayout>-->
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/funds"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_15sdp"-->
+                <!--                    android:background="@drawable/bg_no_color_round_rec"-->
+                <!--                    android:backgroundTint="#4098FF"-->
+                <!--                    android:padding="@dimen/_12sdp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/buying_power"-->
+                <!--                        style="@style/TextStyleHeading.Sub"-->
+                <!--                        android:layout_marginStart="@dimen/_10sdp"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:text="Buying Power: $89,0129.0"-->
+                <!--                        android:textColor="@color/colorWhite" />-->
+
+                <!--                    <Button-->
+                <!--                        android:id="@+id/add_fund"-->
+                <!--                        style="@style/ButtonStyle"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_below="@id/buying_power"-->
+                <!--                        android:layout_alignParentEnd="true"-->
+                <!--                        android:layout_marginTop="@dimen/_5sdp"-->
+                <!--                        android:layout_marginEnd="@dimen/_10sdp"-->
+                <!--                        android:layout_marginBottom="@dimen/_minus3sdp"-->
+                <!--                        android:text="Add Funds"-->
+                <!--                        android:textColor="@color/colorWhite"-->
+                <!--                        android:textSize="12sp" />-->
+
+                <!--                </RelativeLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:text="@string/favorite_stocks_capital"
+                        android:textColor="#B092ACB5"
+                        android:textSize="12sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/watchlist_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_20sdp"
+                        tools:listitem="@layout/watch_list_item" />
+
+                    <TextView
+                        android:id="@+id/no_data_watch"
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:text="@string/no_data"
+                        android:textColor="@color/hintColor"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_15sdp"-->
+                <!--                    android:background="@drawable/bg_no_color_round_rec"-->
+                <!--                    android:backgroundTint="@color/colorWhite"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <TextView-->
+                <!--                        style="@style/TextStyleHeading"-->
+                <!--                        android:layout_marginStart="@dimen/_5sdp"-->
+                <!--                        android:padding="@dimen/_8sdp"-->
+                <!--                        android:paddingStart="@dimen/_10sdp"-->
+                <!--                        android:text="My Stocks"-->
+                <!--                        android:textColor="@color/black"-->
+                <!--                        android:textSize="16sp" />-->
+
+                <!--                    <androidx.recyclerview.widget.RecyclerView-->
+                <!--                        android:id="@+id/stock_items"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        tools:listitem="@layout/my_stocks_item" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/no_data"-->
+                <!--                        style="@style/TextStyle.SemiBold"-->
+                <!--                        android:layout_gravity="center_horizontal"-->
+                <!--                        android:layout_marginBottom="@dimen/_20sdp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="No Data"-->
+                <!--                        android:textColor="@color/hintColor"-->
+                <!--                        android:textSize="15sp"-->
+                <!--                        android:visibility="gone" />-->
+                <!--                </LinearLayout>-->
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

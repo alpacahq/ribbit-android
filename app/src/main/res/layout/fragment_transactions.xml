@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_profile_toolbar" />
+
+
+        <LinearLayout
+            android:id="@+id/won_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_8sdp"
+            android:weightSum="2"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:background="@drawable/bg_no_color_round_rec"
+                android:backgroundTint="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <RelativeLayout
+                    android:id="@+id/funds_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icon_wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/ic_wallet" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/icon_wallet"
+                        android:text="@string/funds_available"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        style="@style/TextStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toEndOf="@id/icon_wallet"
+                        android:text="@string/dollar_0"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/account_no"
+                        style="@style/TextStyle.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icon_wallet"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:singleLine="true"
+                        android:text="@string/account_xxx"
+                        android:textColor="#872C3A40"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bank_name"
+                        style="@style/TextStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icon_wallet"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:text="@string/bank_name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/change"
+                        style="@style/ButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_custom_color_round_rec"
+                        android:text="@string/change_bank"
+                        android:textColor="@color/color_text_theme"
+                        android:textSize="13sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/add_fund"
+                        style="@style/ButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="@string/add_funds"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextStyle.Medium"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/all_transactions"
+                android:textColor="@color/hintColor"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/transaction_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:padding="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                tools:listitem="@layout/transactions_item" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_record"
+            style="@style/TextStyle.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+            android:text="@string/no_data"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

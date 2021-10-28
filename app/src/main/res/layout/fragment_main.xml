@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/social_icon_group" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:src="@drawable/app_logo_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pager_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                tools:listitem="@layout/pager_item" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/title"-->
+<!--                style="@style/TextStyle.Medium"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="@dimen/_30sdp"-->
+<!--                android:paddingStart="@dimen/_50sdp"-->
+<!--                android:paddingEnd="@dimen/_50sdp"-->
+<!--                android:text="Invest commission free in U.S. stocks!"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black" />-->
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_top_round_rec"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingBottom="@dimen/_16sdp"
+            app:behavior_hideable="false"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            tools:behavior_peekHeight="@dimen/_230sdp">
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/label_reward_amount"-->
+            <!--                style="@style/TextStyleHeading.Sub"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:text="Earn up to $100" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/label_reward"-->
+            <!--                style="@style/TextStyle"-->
+            <!--                android:layout_below="@+id/label_reward_amount"-->
+            <!--                android:layout_alignStart="@+id/label_reward_amount"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:text="Get up to $100 in top stocks as a joining bonus from us" />-->
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:layout_marginEnd="@dimen/_16sdp"-->
+            <!--                android:layout_toStartOf="@+id/label_reward"-->
+            <!--                android:background="@drawable/gift" />-->
+
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/sign_up"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:gravity="center"
+                android:text="@string/create_account"
+                app:finalCornerAngle="50dp"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login"
+                style="@style/FlatTransparentButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/sign_up"
+                android:text="@string/log_in"
+                android:textColor="#61000000" />
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

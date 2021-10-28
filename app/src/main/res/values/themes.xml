@@ -1,0 +1,335 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/colorBlack</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="AppTheme.Main">
+        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
+
+    <style name="AppTheme.Main.Home">
+        <item name="android:statusBarColor">@color/colorWindowBackground</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+    </style>
+
+    <style name="AppTheme.Main.Home.Blue">
+        <item name="android:statusBarColor">@color/colorPurpleLight</item>
+        <item name="colorPrimary">@color/colorPurpleLight</item>
+        <item name="colorPrimaryDark">@color/colorPurpleLight</item>
+        <item name="android:windowBackground">@color/colorOffWhite</item>
+    </style>
+
+    <style name="AppTheme.Main.Home.LightRed">
+        <item name="android:statusBarColor">@color/colorLightRed</item>
+        <item name="colorPrimary">@color/colorLightRed</item>
+        <item name="colorPrimaryDark">@color/colorLightRed</item>
+        <item name="android:windowBackground">@color/colorOffWhite</item>
+    </style>
+
+
+    <style name="TextStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textColor">@color/hintColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.Medium" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textColor">@color/hintColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.Regular" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textColor">@color/hintColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.SemiBold" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textColor">@color/textColorNormal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyleHeading" parent="TextAppearance.AppCompat.Title">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textColor">@color/textColorSubHeading</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyleHeading.Sub" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textColor">@color/textColorSubHeading</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_width">@dimen/_220sdp</item>
+        <item name="android:layout_height">@dimen/_42sdp</item>
+        <item name="android:paddingStart">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_16sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_selector_grey</item>
+    </style>
+
+    <style name="AnimatedButtonStyle" parent="">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_width">@dimen/_220sdp</item>
+        <item name="android:layout_height">@dimen/_42sdp</item>
+        <item name="android:paddingStart">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_16sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_selector_grey</item>
+    </style>
+
+    <style name="FlatTransparentButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/transparentButtonTextColor</item>
+        <item name="android:layout_width">@dimen/_200sdp</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:paddingStart">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_16sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="FlatSelectorButtonStyle" parent="">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_width">@dimen/_200sdp</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="android:paddingStart">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_16sdp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/selector_tabs_button</item>
+
+    </style>
+
+
+    <style name="StyleEditText" parent="@android:style/Widget.EditText">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="hintTextAppearance">@style/EditTextHintStyle</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:paddingStart">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_8sdp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/selector_edit_text</item>
+    </style>
+
+    <style name="EditTextHintStyle">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/red</item>
+        <item name="android:textColor">@color/colorLightRed</item>
+    </style>
+
+    <style name="MyEditTextTheme">
+        <item name="colorControlNormal">@color/textLineColor</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <style name="StyleEditTextCustom" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/hintColor</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="android:paddingStart">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_8sdp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/selector_edit_text</item>
+    </style>
+
+
+    <style name="TextInputStyle" parent="Widget.Design.TextInputLayout">
+        <item name="hintTextAppearance">@style/HintStyle</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="hintTextColor">@color/hintColor</item>
+        <item name="android:textSize">18sp</item>
+
+        <item name="errorTextAppearance">@style/StyleError</item>
+    </style>
+
+    <style name="HintStyle" parent="TextAppearance.Design.Hint">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_height">@dimen/_32sdp</item>
+        <item name="android:textColor">@color/hintColor</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="StyleError" parent="TextAppearance.Design.Error">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/colorError</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textColor">@color/hintColor</item>
+        <item name="hintTextColor">@color/hintColor</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="drawableEndCompat">@drawable/ic_drop_down</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <!--You can set other style items also, such as animations and etc-->
+    </style>
+
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+
+
+    </style>
+
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+
+    //theme drop down
+
+    <style name="Widget.App.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.ExposedDropdownMenu</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_height">@dimen/_20sdp</item>
+        <item name="endIconMode">custom</item>
+    </style>
+
+    <style name="ThemeOverlay.App.ExposedDropdownMenu" parent="">
+        <item name="colorPrimary">#3A3A3A</item>
+        <item name="colorError">@color/colorLightRed</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
+        <item name="autoCompleteTextViewStyle">
+            @style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox
+        </item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="hintTextColor">@color/hintColor</item>
+    </style>
+
+    <style name="TextAppearance.App.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+
+    <style name="SwitchStyle" parent="">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/textColorNormal</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#221F1F</item>
+    </style>
+
+    <style name="Widget.AppTheme.MaterialDatePicker" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="materialCalendarHeaderToggleButton">
+            @style/Widget.AppTheme.MaterialCalendar.HeaderToggleButton
+        </item>
+    </style>
+
+    <style name="Widget.AppTheme.MaterialCalendar.HeaderToggleButton" parent="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.ShapeableImageView" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButton" parent="">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+    </style>
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="srcCompat">@drawable/ic_search</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlayExtended</item>
+        <item name="tint">@color/colorWhite</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlayExtended" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+</resources>

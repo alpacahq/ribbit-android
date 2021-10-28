@@ -1,0 +1,50 @@
+<resources>
+    <declare-styleable name="CustomInputLayout">
+        <attr name="error_msg" format="reference|string|integer" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="ErrorMessage" format="reference|string" />
+        <attr name="TitleMessage" format="reference|string" />
+        <attr name="android:digits" format="reference|string" />
+        <attr name="android:inputType" />
+        <attr name="layout_height" format="dimension" />
+        <attr name="android:textSize" format="dimension" />
+        <attr name="android:drawableStart" />
+        <attr name="android:drawableEnd" />
+        <attr name="paddingStart" />
+        <attr name="android:nextFocusDown" format="reference|integer" />
+        <attr name="android:nextFocusForward" format="reference|integer" />
+        <attr name="android:nextFocusRight" format="reference|integer" />
+        <attr name="android:hint" />
+        <attr name="android:maxLength" format="reference|integer" />
+        <attr name="android:imeOptions" format="reference|integer" />
+        <attr name="android:text" format="reference|string" />
+        <attr name="android:enabled" />
+        <attr name="android:cursorVisible" />
+        <attr name="android:textAlignment" />
+        <attr name="background" />
+        <attr name="customIcon" format="reference|boolean" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="error">
+        <attr name="state_error" format="boolean" />
+    </declare-styleable>
+
+    <attr name="type">
+        <enum name="Text" value="1" />
+        <enum name="Phone" value="2" />
+        <enum name="Email" value="3" />
+        <enum name="Password" value="4" />
+        <enum name="NAME" value="5" />
+        <enum name="FULL_NAME" value="6" />
+        <enum name="DOB" value="7" />
+        <enum name="LONG_TEXT" value="8" />
+        <enum name="ADDRESS" value="9" />
+        <enum name="Number" value="10" />
+    </attr>
+
+
+</resources>

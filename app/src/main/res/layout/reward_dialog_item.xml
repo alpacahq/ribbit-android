@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_4sdp">
+
+        <LinearLayout
+            android:id="@+id/won_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_small_round_rec"
+            android:backgroundTint="#D1D9DD"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_12sdp">
+
+
+            <ImageView
+                android:id="@+id/portfolio_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/apple" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

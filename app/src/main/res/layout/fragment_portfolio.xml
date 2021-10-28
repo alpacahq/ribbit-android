@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_profile_toolbar" />
+
+
+        <LinearLayout
+            android:id="@+id/won_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:id="@+id/portfolio_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@drawable/bg_no_color_round_rec"
+                        android:backgroundTint="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/rel_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:padding="@dimen/_2sdp">
+
+                            <TextView
+                                android:id="@+id/portfolio"
+                                style="@style/TextStyle.Medium"
+                                android:text="@string/portfolio_value"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/portfolio_value"
+                                style="@style/TextStyleHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@id/portfolio"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="@string/dollar_0"
+                                android:textColor="#161926"
+                                android:textSize="20sp" />
+
+                            <RadioGroup
+                                android:id="@+id/radio_group"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/day1"
+                                    style="@style/TextStyle"
+                                    android:layout_width="@dimen/_24sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:background="@drawable/text_bg_round_selector_bottom"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:text="@string/_1d"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/hintColor"
+                                    android:textSize="13sp" />
+
+                                <RadioButton
+                                    android:id="@+id/week1"
+                                    style="@style/TextStyle"
+                                    android:layout_width="@dimen/_24sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    android:background="@drawable/text_bg_round_selector_bottom"
+                                    android:button="@null"
+                                    android:text="@string/_1w"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/hintColor"
+                                    android:textSize="13sp" />
+
+                                <RadioButton
+                                    android:id="@+id/month1"
+                                    style="@style/TextStyle"
+                                    android:layout_width="@dimen/_24sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    android:background="@drawable/text_bg_round_selector_bottom"
+                                    android:button="@null"
+                                    android:text="@string/_1m"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/hintColor"
+                                    android:textSize="13sp" />
+                            </RadioGroup>
+
+                        </RelativeLayout>
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/portfolio_chart"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="@dimen/_5sdp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/funds_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/portfolio_graph"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/bg_no_color_round_rec"
+                        android:backgroundTint="@color/colorWhite"
+                        android:padding="@dimen/_12sdp">
+
+                        <ImageView
+                            android:id="@+id/icon_bank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:src="@drawable/ic_wallet" />
+
+                        <TextView
+                            android:id="@+id/title"
+                            style="@style/TextStyle.SemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_toEndOf="@id/icon_bank"
+                            android:text="@string/funds_available"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/balance"
+                            style="@style/TextStyleHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_toEndOf="@id/icon_bank"
+                            android:text="@string/dollar_0"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/add_fund"
+                            style="@style/TextStyleHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:text="@string/plus_add_funds"
+                            android:textColor="@color/color_text_theme"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/funds_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_no_color_round_rec"
+                        android:backgroundTint="@color/colorWhite"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextStyle.SemiBold"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/my_stocks"
+                            android:textColor="#B092ACB5"
+                            android:textSize="13sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/stock_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_20sdp"
+                            tools:listitem="@layout/my_stocks_item" />
+
+                        <TextView
+                            android:id="@+id/no_data"
+                            style="@style/TextStyle.SemiBold"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:gravity="center"
+                            android:text="@string/no_data"
+                            android:textColor="@color/hintColor"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

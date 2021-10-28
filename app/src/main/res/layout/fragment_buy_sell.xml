@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWindowBackground"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_profile_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/won_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E5E5E5"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_45sdp"
+                            app:tabBackground="@drawable/selector_tabs_button"
+                            app:tabIndicatorGravity="top"
+                            app:tabMode="fixed">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:id="@+id/buy_tab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/buy" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:id="@+id/sell_tab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sell" />
+
+
+                        </com.google.android.material.tabs.TabLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_15sdp"
+                        android:weightSum="3">
+
+                        <com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+                            android:id="@+id/win_icon"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@drawable/apple"
+                            app:circleBackgroundColor="@color/textColor"
+                            app:text="RR"
+                            app:textFont="@font/inter_semibold"
+                            app:textSize="12sp" />
+                        <!--                        <ImageView-->
+                        <!--                            android:id="@+id/win_icon"-->
+                        <!--                            android:layout_width="@dimen/_25sdp"-->
+                        <!--                            android:layout_height="@dimen/_20sdp"-->
+                        <!--                            android:layout_marginTop="@dimen/_3sdp"-->
+                        <!--                            android:src="@drawable/apple" />-->
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/title"
+                                style="@style/TextStyleHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/aapl"
+                                android:textColor="#384549"
+                                android:textSize="13sp" />
+
+
+                            <TextView
+                                android:id="@+id/desc"
+                                style="@style/TextStyle"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/title"
+                                android:layout_marginEnd="@dimen/_2sdp"
+                                android:singleLine="true"
+                                android:text="@string/asset_desc"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/ticker_price"
+                            style="@style/TextStyleHeading"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:text="@string/dollar_0"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:backgroundTint="#D9E2E5"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/qty_text"
+                            style="@style/TextStyle.SemiBold"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_weight="1"
+                            android:text="@string/quantity"
+                            android:textColor="#B092ACB5"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/price_text"
+                            style="@style/TextStyle.SemiBold"
+                            android:layout_marginStart="@dimen/_22sdp"
+                            android:layout_weight="1"
+                            android:text="@string/notional_amount"
+                            android:textColor="#B092ACB5"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:backgroundTint="#D9E2E5"
+                        android:orientation="horizontal">
+
+                        <!--                            app:endIconDrawable="@drawable/ic_drop_down_custom"-->
+                        <EditText
+                            android:id="@+id/quantity"
+                            style="@style/Widget.App.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_border_small_round_rec"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:imeActionLabel="Done"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:text="@string/_zero"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/hintColor"
+                            android:textSize="15sp" />
+
+                        <!--                        android:drawableStart="@drawable/ic_minus_icon"-->
+                        <!--                        android:drawableEnd="@drawable/ic_add_icon"-->
+
+                        <EditText
+                            android:id="@+id/price"
+                            style="@style/Widget.App.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_border_small_round_rec"
+                            android:drawableStart="@drawable/ic_dollar"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:imeActionLabel="Done"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@string/_zero"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/hintColor"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="@dimen/_15sdp"-->
+                    <!--                        android:layout_marginBottom="@dimen/_5sdp"-->
+                    <!--                        android:backgroundTint="#D9E2E5"-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:weightSum="2">-->
+
+
+                    <!--                        <TextView-->
+                    <!--                            style="@style/TextStyle.SemiBold"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:layout_marginStart="@dimen/_16sdp"-->
+                    <!--                            android:layout_weight="1"-->
+                    <!--                            android:text="Order Type"-->
+                    <!--                            android:textColor="#B092ACB5"-->
+                    <!--                            android:textSize="12sp" />-->
+
+
+                    <!--                        <RelativeLayout-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_weight="1"-->
+                    <!--                            android:gravity="center">-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/market_toggle"-->
+                    <!--                                style="@style/TextStyle.SemiBold"-->
+                    <!--                                android:layout_centerVertical="true"-->
+                    <!--                                android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                                android:layout_marginEnd="@dimen/_5sdp"-->
+                    <!--                                android:text="Market"-->
+                    <!--                                android:textColor="#B092ACB5"-->
+                    <!--                                android:textSize="12sp" />-->
+
+                    <!--                            <ToggleButton-->
+                    <!--                                android:id="@+id/toggle_value"-->
+                    <!--                                android:layout_width="@dimen/_30sdp"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                                android:layout_toEndOf="@id/market_toggle"-->
+                    <!--                                android:background="@drawable/ic_toggle_bg"-->
+                    <!--                                android:checked="true"-->
+                    <!--                                android:minHeight="@dimen/_1sdp"-->
+                    <!--                                android:textOff=""-->
+                    <!--                                android:textOn=""-->
+                    <!--                                android:theme="@style/SwitchStyle"-->
+                    <!--                                app:switchMinWidth="@dimen/_20sdp" />-->
+
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/limit_toggle"-->
+                    <!--                                style="@style/TextStyle.SemiBold"-->
+                    <!--                                android:layout_centerVertical="true"-->
+                    <!--                                android:layout_marginStart="@dimen/_8sdp"-->
+                    <!--                                android:layout_toEndOf="@id/toggle_value"-->
+                    <!--                                android:text="Limit"-->
+                    <!--                                android:textColor="#B092ACB5"-->
+                    <!--                                android:textSize="12sp" />-->
+                    <!--                        </RelativeLayout>-->
+
+                    <!--                    </LinearLayout>-->
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/funds_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_no_color_round_rec"
+                    android:backgroundTint="@color/colorWhite"
+                    android:padding="@dimen/_12sdp">
+
+                    <ImageView
+                        android:id="@+id/icon_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/ic_wallet" />
+
+                    <TextView
+                        android:id="@+id/fund_title"
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toEndOf="@id/icon_bank"
+                        android:text="@string/funds_available"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        style="@style/TextStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fund_title"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_toEndOf="@id/icon_bank"
+                        android:text="@string/dollar_0"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/add_fund"
+                        style="@style/TextStyleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:text="@string/plus_add_funds"
+                        android:textColor="@color/color_text_theme"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/buy_sell"
+                    style="@style/AnimatedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:enabled="false"
+                    android:text="@string/buy_shares"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+
+        <include
+            android:id="@+id/error_message"
+            layout="@layout/message_dialog" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

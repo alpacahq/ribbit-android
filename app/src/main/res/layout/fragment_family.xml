@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_white_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_28sdp"
+            android:paddingEnd="@dimen/_28sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextStyleHeading"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:text="@string/title_10_percent_shareholder" />
+
+                    <TextView
+                        android:id="@+id/desc"
+                        style="@style/TextStyle.Regular"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="@string/if_you_don_t_know_what_this_means_it_probably_does_not_apply_to_you"
+                        android:textColor="#92ACB5" />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/desclaim_text"
+                style="@style/TextStyle.Regular"
+                app:layout_constraintBottom_toTopOf="@id/no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="@string/we_are_required_to_collect_this_information_by_law_to_help_prevent_insider_trading"
+                android:textColor="#92ACB5"
+                android:textSize="15sp"
+                />
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/no"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:gravity="center"
+                android:text="@string/no"
+                app:finalCornerAngle="50dp"
+                app:layout_constraintBottom_toTopOf="@id/yes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/yes"
+                style="@style/AnimatedButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="@string/yes"
+                android:textColor="@color/transparentButtonTextColor"
+                app:finalCornerAngle="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spinning_bar_color="@color/colorPrimary"
+                app:spinning_bar_padding="@dimen/_2sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

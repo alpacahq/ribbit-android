@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_title_profile_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWindowBackground"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorWindowBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_28sdp"
+                    android:paddingEnd="@dimen/_28sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextStyle.SemiBold"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:text="@string/general_details"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+
+                        <com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+                            android:id="@+id/profile_img"
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_48sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            app:circleBackgroundColor="@color/holo_light_red"
+                            app:text="SS"
+                            app:textColor="@color/light_red"
+                            app:textFont="@font/inter_semibold"
+                            app:textSize="20sp" />
+
+                        <!--                    <RelativeLayout-->
+                        <!--                        style="@style/ShapeAppearanceOverlay.App.ShapeableImageView"-->
+                        <!--                        android:layout_width="@dimen/_45sdp"-->
+                        <!--                        android:layout_height="@dimen/_45sdp"-->
+
+                        <!--                        android:background="@drawable/bg_round_rec"-->
+                        <!--                        android:backgroundTint="#FFEDFC"-->
+                        <!--                        android:scaleType="fitCenter">-->
+
+                        <!--                        <TextView-->
+                        <!--                            style="@style/TextStyle.Medium"-->
+                        <!--                            android:layout_centerInParent="true"-->
+                        <!--                            android:text="JE"-->
+                        <!--                            android:textColor="#FF56E4"-->
+                        <!--                            android:textSize="16sp" />-->
+                        <!--                        &lt;!&ndash;                        <com.google.android.material.imageview.ShapeableImageView&ndash;&gt;-->
+                        <!--                        &lt;!&ndash;                            android:id="@+id/notify_icon"&ndash;&gt;-->
+                        <!--                        &lt;!&ndash;                            android:layout_width="@dimen/_15sdp"&ndash;&gt;-->
+                        <!--                        &lt;!&ndash;                            android:layout_height="@dimen/_15sdp"&ndash;&gt;-->
+                        <!--                        &lt;!&ndash;                            android:layout_centerInParent="true"&ndash;&gt;-->
+                        <!--                        &lt;!&ndash;                            app:srcCompat="@drawable/gift_icon" />&ndash;&gt;-->
+                        <!--                    </RelativeLayout>-->
+
+                        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                            android:id="@+id/upload"
+                            style="@style/ButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:background="@drawable/bg_button_round_rec"
+                            android:backgroundTint="#1C715AFF"
+                            android:gravity="center"
+                            android:text="@string/upload"
+                            android:textColor="#4E4586"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/delete"
+                            style="@style/TextStyleHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:text="@string/remove"
+                            android:textColor="@color/color_text_theme_custom"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <com.stockly.android.widgets.CustomEditText
+                        android:id="@+id/first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:enabled="false"
+                        android:hint="@string/hint_name"
+                        android:inputType="textPersonName|textCapSentences"
+                        app:type="Text" />
+
+                    <EditText
+                        android:id="@+id/bio"
+                        style="@style/StyleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_45sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:hint="@string/enter_bio"
+                        android:inputType="textMultiLine|textCapSentences" />
+                    <TextView
+                        android:id="@+id/error_message"
+                        style="@style/StyleError"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorError"
+                        android:text="@string/error_enter_valid_value"
+                        android:visibility="gone"
+                        tools:text="@string/error_enter_valid_value" />
+
+<!--                    <TextView-->
+<!--                        style="@style/TextStyle.SemiBold"-->
+<!--                        android:layout_marginTop="@dimen/_24sdp"-->
+<!--                        android:text="Social Media"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="16sp" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="@dimen/_15sdp"-->
+<!--                            android:background="@drawable/ic_fb"-->
+<!--                            android:backgroundTint="#A8566176" />-->
+
+<!--                        <com.stockly.android.widgets.CustomEditText-->
+<!--                            android:id="@+id/fb_link"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_20sdp"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:hint="Facebook URL"-->
+<!--                            android:inputType="text" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:background="@drawable/ic_twitter"-->
+<!--                            android:backgroundTint="#A8566176" />-->
+
+<!--                        <com.stockly.android.widgets.CustomEditText-->
+<!--                            android:id="@+id/twitter_link"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_20sdp"-->
+<!--                            android:layout_marginTop="@dimen/_2sdp"-->
+<!--                            android:hint="Twitter URL"-->
+<!--                            android:inputType="text" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginTop="@dimen/_10sdp"-->
+<!--                            android:background="@drawable/ic_insta"-->
+<!--                            android:backgroundTint="#A8566176" />-->
+
+<!--                        <com.stockly.android.widgets.CustomEditText-->
+<!--                            android:id="@+id/insta_link"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_20sdp"-->
+<!--                            android:layout_marginTop="@dimen/_2sdp"-->
+<!--                            android:hint="Instagram URL"-->
+<!--                            android:inputType="text" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_25sdp">-->
+
+<!--                        <TextView-->
+<!--                            style="@style/TextStyle.SemiBold"-->
+<!--                            android:text="Public Portfolio"-->
+<!--                            android:textColor="@color/colorBlack"-->
+<!--                            android:textSize="16sp" />-->
+
+<!--                        <androidx.appcompat.widget.SwitchCompat-->
+<!--                            android:id="@+id/public_portfolio"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="@dimen/_3sdp"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_marginStart="@dimen/_2sdp"-->
+<!--                            android:checked="true"-->
+<!--                            android:theme="@style/SwitchStyle"-->
+<!--                            app:switchMinWidth="@dimen/_50sdp" />-->
+<!--                    </RelativeLayout>-->
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/logout_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_minus20sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_24sdp">
+
+                    <TextView
+                        android:id="@+id/logout_text"
+                        style="@style/TextStyleHeading"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/logout"
+                        android:textColor="#9F9F9F"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@id/logout_text"
+                        android:src="@drawable/ic_exit_to_app" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

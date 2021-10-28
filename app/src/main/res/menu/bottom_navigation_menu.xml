@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/portfolio"
+        android:enabled="true"
+        android:icon="@drawable/ic_donut_large_24px"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/disable"
+        android:enabled="false"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/transactions"
+        android:enabled="true"
+        android:icon="@drawable/ic_compare_arrows"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_person"
+        android:title=""
+        app:showAsAction="always" />
+</menu>

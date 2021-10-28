@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWindowBackground">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_notification_title_toolbar" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/notification_items"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_18sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_white_round_dialog"
+                android:paddingStart="@dimen/_18sdp"
+                android:paddingEnd="@dimen/_18sdp"
+                tools:listitem="@layout/notification_item" />
+
+            <TextView
+                style="@style/TextStyleHeading"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center_horizontal"
+                android:text="@string/clear_all"
+                android:textColor="#9F9F9F"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress_bar" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
