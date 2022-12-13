@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">35.193.43.181:8080</domain>
+        <domain includeSubdomains="true">127.0.0.1:8080</domain>
     </domain-config>
     <base-config cleartextTrafficPermitted="true">
         <certificates src="system" />
